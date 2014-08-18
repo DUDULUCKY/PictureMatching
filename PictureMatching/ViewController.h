@@ -10,5 +10,6 @@
 
 @interface ViewController : UIViewController
 @property (weak, nonatomic) IBOutlet UILabel *BtnTag;
+- (IBAction)reFlash:(id)sender;
 
 @end

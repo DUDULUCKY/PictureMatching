@@ -30,13 +30,13 @@
 
 - (void)initButton
 {
-    for (int i = 1; i < 10; i++) {
-        for (int j = 1; j < 15; j++) {
+    for (int i = 1; i < 15; i++) {
+        for (int j = 1; j < 9; j++) {
             UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
-            button.tag = i + j * 10 + 10000;
+            button.tag = i * 10 + j + 10000;
             [button addTarget:self action:@selector(buttonClick:) forControlEvents:UIControlEventTouchUpInside];
-            button.frame = CGRectMake(20 + 31 * (i - 1), 30 + 31 * (j -1), 30, 30);
-            button.backgroundColor = [UIColor redColor];
+            button.frame = CGRectMake(23 + 31 * (i - 1), 50 + 31 * (j -1), 30, 30);
+            //button.backgroundColor = [UIColor redColor];
             button.alpha = 0.5;
         
             [self.view addSubview:button];
@@ -48,23 +48,24 @@
 
 - (void)initBtnPic
 {
-    static int picPosition[14][9] = {0};      //存储各个按钮上得图片种类
-    int repeat[9] = {0};            //各个图片出现次数
+    static int picPosition[8][14] = {0};      //存储各个按钮上的图片种类
+    int repeat[14] = {0};            //各个图片出现次数
     
-    for (int xPos = 1; xPos < 10; xPos++)
+    for (int xPos = 1; xPos < 15; xPos++)
     {
-        for (int yPos = 1; yPos < 15; yPos++)
+        for (int yPos = 1; yPos < 9; yPos++)
         {
             while (TRUE)
             {
-                int picNum = arc4random() % 9 + 1;
+                int picNum = arc4random() % 14 + 1;
                 
-                if (repeat[picNum - 1] != 14)
+                if (repeat[picNum - 1] < 8)
                 {
                     NSString *picName = [[NSString alloc] initWithFormat:@"%d.jpg", picNum];
-                    UIButton *button = (UIButton *)[self.view viewWithTag:(10000 + yPos * 10 + xPos)];
+                    UIButton *button = (UIButton *)[self.view viewWithTag:(10000 + xPos * 10 + yPos)];
                     [button setBackgroundImage:[UIImage imageNamed:picName] forState:UIControlStateNormal];
-                    picPosition[yPos][xPos] = picNum;
+                    picPosition[yPos - 1][xPos - 1] = picNum;
+                    repeat[picNum - 1]++;
                     break;
                 }
                 else
@@ -80,6 +81,29 @@
 - (void)buttonClick:(UIButton *)sender
 {
     self.BtnTag.text = [NSString stringWithFormat:@"%d", sender.tag];
+    static BOOL push = FALSE;
+    static int tag = 0;
+    
+    if (push == FALSE)
+    {
+        tag = sender.tag;
+        push = TRUE;
+    }
+    else
+    {
+        push = FALSE;
+        if (tag != sender.tag) {
+            self.BtnTag.text = @"两次点击不一致";
+        }
+        else
+        {
+            self.BtnTag.text = @"两次点击一致";
+        }
+    }
 }
 
+- (IBAction)reFlash:(id)sender
+{
+    [self initBtnPic];
+}
 @end

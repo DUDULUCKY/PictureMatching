@@ -36,5 +36,12 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+    <key>UIInterfaceOrientation</key>
+    <string>UIInterfaceOrientationLandscapeRight</string>
+    <key>UISupportedInterfaceOrientations</key>
+    <array>
+        <string>UIInterfaceOrientationLandscapeRight</string>
+        <string>UIInterfaceOrientationLandscapeLeft</string>
+    </array>
 </dict>
 </plist>
