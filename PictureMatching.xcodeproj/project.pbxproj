@@ -69,6 +69,7 @@
 		8572749F199B42B800197C13 /* PictureMatchingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PictureMatchingTests-Info.plist"; sourceTree = "<group>"; };
 		857274A1199B42B800197C13 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		857274A3199B42B800197C13 /* PictureMatchingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PictureMatchingTests.m; sourceTree = "<group>"; };
+		85A0881319A1DB52000F162A /* Globel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Globel.h; sourceTree = "<group>"; };
 		85DEA518199D991200BE023B /* 1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 1.jpg; sourceTree = "<group>"; };
 		85DEA519199D991200BE023B /* 10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10.jpg; sourceTree = "<group>"; };
 		85DEA51A199D991200BE023B /* 11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 11.jpg; sourceTree = "<group>"; };
@@ -147,6 +148,7 @@
 				8572748A199B42B800197C13 /* Main.storyboard */,
 				8572748D199B42B800197C13 /* ViewController.h */,
 				8572748E199B42B800197C13 /* ViewController.m */,
+				85A0881319A1DB52000F162A /* Globel.h */,
 				85727490199B42B800197C13 /* Images.xcassets */,
 				85DEA517199D991200BE023B /* pic */,
 				8572747F199B42B800197C13 /* Supporting Files */,
