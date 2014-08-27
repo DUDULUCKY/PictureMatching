@@ -202,7 +202,6 @@
     return TRUE;
 }
 
-
 //一个拐角的判断
 - (BOOL) oneCorner:(int)firstTag second:(int)secondTag
 {
@@ -264,8 +263,6 @@
     
     return FALSE;
 }
-
-
 
 
 - (BOOL) checkLink:(int)firstTag second:(int)secondTag
