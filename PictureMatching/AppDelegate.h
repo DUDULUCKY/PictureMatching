@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Match.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

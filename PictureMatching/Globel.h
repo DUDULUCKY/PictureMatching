@@ -9,6 +9,6 @@
 #ifndef PictureMatching_Globel_h
 #define PictureMatching_Globel_h
 
-static int picPosition[8][14];
+static int picPosition[10][16] = {0};
 
 #endif
