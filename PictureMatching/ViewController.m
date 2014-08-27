@@ -266,6 +266,8 @@
 }
 
 
+
+
 - (BOOL) checkLink:(int)firstTag second:(int)secondTag
 {
     if ((firstTag - 10000) / 10 == (secondTag - 10000) / 10
